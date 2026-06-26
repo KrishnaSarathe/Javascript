@@ -1,6 +1,6 @@
-# 📘 JavaScript — NSDC Learning Repository
+# 📘 JavaScript — Learning Repository
 
-A structured collection of JavaScript fundamentals and concepts, built as part of the **NSDC** curriculum.
+A structured collection of JavaScript fundamentals and concepts, built as part of the learning curriculum.
 
 ---
 
@@ -61,4 +61,4 @@ GitHub: [@KrishnaSarathe](https://github.com/KrishnaSarathe)
 
 ---
 
-> Made with 💛 as part of the NSDC JavaScript learning path.
+
