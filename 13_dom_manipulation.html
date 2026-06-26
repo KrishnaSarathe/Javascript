@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 30px;
+        }
+
+        .box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+
+        .box:hover {
+            background: #273549;
+        }
+
+        button {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 5px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #7dd3fc;
+        }
+
+        #output {
+            margin-top: 15px;
+            color: #94a3b8;
+            font-style: italic;
+        }
+
+        #card-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: #334155;
+            padding: 15px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .highlight {
+            background: rgba(56, 189, 248, 0.15) !important;
+            border-color: #38bdf8 !important;
+        }
+
+        input {
+            background: #1e293b;
+            border: 1px solid #475569;
+            color: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-right: 10px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #38bdf8;
+        }
+
+        #dynamic-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        #dynamic-list li {
+            background: #1e293b;
+            padding: 8px 14px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #dynamic-list li span {
+            cursor: pointer;
+            color: #f87171;
+        }
+
+        #color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            background: #38bdf8;
+            transition: background 0.4s;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>DOM Manipulation Practice</h1>
+
+    <!-- selecting and changing content -->
+    <div class="box" id="section-1">
+        <h2>1. Selecting and Changing Text</h2>
+        <p id="demo-text">original text -- change me using JS</p>
+        <button onclick="changeText()">Change Text</button>
+        <button onclick="changeHTML()">Change HTML</button>
+    </div>
+
+    <!-- changing styles -->
+    <div class="box" id="section-2">
+        <h2>2. Changing Styles and Classes</h2>
+        <p id="styled-para">this paragraph will get styled</p>
+        <button onclick="addHighlight()">Add Highlight Class</button>
+        <button onclick="removeHighlight()">Remove Highlight</button>
+        <button onclick="toggleHighlight()">Toggle Highlight</button>
+    </div>
+
+    <!-- event listeners -->
+    <div class="box" id="section-3">
+        <h2>3. Event Listeners</h2>
+        <button id="click-btn">Click me</button>
+        <button id="hover-btn">Hover over me</button>
+        <p id="output">events will show here</p>
+    </div>
+
+    <!-- creating elements dynamically -->
+    <div class="box" id="section-4">
+        <h2>4. Creating Elements Dynamically</h2>
+        <div id="card-container"></div>
+        <button onclick="addCard()">Add Card</button>
+    </div>
+
+    <!-- dynamic list with add/remove -->
+    <div class="box" id="section-5">
+        <h2>5. Dynamic List</h2>
+        <input type="text" id="list-input" placeholder="type something">
+        <button onclick="addToList()">Add Item</button>
+        <ul id="dynamic-list"></ul>
+    </div>
+
+    <!-- random color generator -->
+    <div class="box" id="section-6">
+        <h2>6. Random Color Box</h2>
+        <div id="color-box"></div>
+        <button onclick="changeColor()" style="margin-top:10px">Random Color</button>
+    </div>
+
+    <script src="13_dom_manipulation.js"></script>
+</body>
+
+</html>
